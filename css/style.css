@@ -1,0 +1,135 @@
+section {
+  position: relative;
+}
+
+section .click {
+  height: 30px;
+  position: absolute;
+  top: 450px;
+  left: 500px;
+}
+
+section .click label {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+section .click label:hover {
+  background-color: gainsboro;
+}
+
+section .bg-img {
+  margin: auto;
+  width: 600px;
+  height: 400px;
+  position: relative;
+  border: 5px solid pink;
+  overflow: hidden;
+}
+
+section .bg-img div {
+  width: 150px;
+  height: 100%;
+  background-color: tan;
+  float: left;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+section .bg-img div:nth-child(1) span {
+  background-position: 0px 0;
+}
+
+section .bg-img div:nth-child(2) span {
+  background-position: -150px 0;
+}
+
+section .bg-img div:nth-child(3) span {
+  background-position: -300px 0;
+}
+
+section .bg-img div:nth-child(4) span {
+  background-position: -450px 0;
+}
+
+section .bg-img div span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  transition: .6s;
+  text-indent: -999px;
+  animation: leave .6s;
+  z-index: 1;
+}
+
+section .bg-img div span:nth-child(1) {
+  background-image: url(../image/1.jpg);
+}
+
+section .bg-img div span:nth-child(2) {
+  background-image: url(../image/2.jpg);
+}
+
+section .bg-img div span:nth-child(3) {
+  background-image: url(../image/3.jpg);
+}
+
+section .bg-img div span:nth-child(4) {
+  background-image: url(../image/4.jpg);
+}
+
+section input:nth-child(1):checked ~ .bg-img > div span:nth-child(1) {
+  left: 0;
+  z-index: 2;
+  animation: none;
+}
+
+section input:nth-child(2):checked ~ .bg-img > div span:nth-child(2) {
+  left: 0;
+  z-index: 2;
+  animation: none;
+}
+
+section input:nth-child(3):checked ~ .bg-img > div span:nth-child(3) {
+  left: 0;
+  z-index: 2;
+  animation: none;
+}
+
+section input:nth-child(4):checked ~ .bg-img > div span:nth-child(4) {
+  left: 0;
+  z-index: 2;
+  animation: none;
+}
+
+section input:nth-child(1):checked ~ .click label:nth-child(1) {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+section input:nth-child(2):checked ~ .click label:nth-child(2) {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+section input:nth-child(3):checked ~ .click label:nth-child(3) {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+section input:nth-child(4):checked ~ .click label:nth-child(4) {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes leave {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
